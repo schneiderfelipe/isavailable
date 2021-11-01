@@ -18,7 +18,8 @@ def isavailable(name: str) -> bool:
         return False
     else:
         typer.secho(
-            f"An error occurred: {response.status_code}", fg=typer.colors.BRIGHT_RED
+            f"An error occurred: {response.status_code}",
+            fg=typer.colors.BRIGHT_RED,
         )
         raise typer.Exit(response.status_code)
 
@@ -37,9 +38,17 @@ def app(names: List[str]):
         echo_name(name, width=width, nl=False)
         typer.echo(" is… ", nl=False)
         if isavailable(name):
-            typer.secho("    available 🎉", nl=False, fg=typer.colors.BRIGHT_GREEN)
+            typer.secho(
+                "    available 🎉",
+                nl=False,
+                fg=typer.colors.BRIGHT_GREEN,
+            )
         else:
-            typer.secho("not available 😭", nl=False, fg=typer.colors.BRIGHT_RED)
+            typer.secho(
+                "not available 😭",
+                nl=False,
+                fg=typer.colors.BRIGHT_RED,
+            )
         typer.echo(" on PyPI.")
 
 
