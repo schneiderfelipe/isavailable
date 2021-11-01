@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "isavailable"
-version = "0.1.0"
+version = "0.1.1"
 description = "Check Python package distribution name availability on PyPI"
 authors = ["Felipe S. S. Schneider <schneider.felipe@posgrad.ufsc.br>"]
 license = "MIT"
