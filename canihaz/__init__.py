@@ -1,4 +1,5 @@
-from typing import List
+from functools import reduce
+from typing import List, Optional
 
 
 import requests
@@ -17,22 +18,29 @@ def isavailable(name: str) -> bool:
         return False
     else:
         typer.secho(
-            f"An error occurred: {response.status_code}",
-            fg=typer.colors.BRIGHT_RED,
+            f"An error occurred: {response.status_code}", fg=typer.colors.BRIGHT_RED
         )
         raise typer.Exit(response.status_code)
 
 
+def echo_name(name: str, width: Optional[int] = None, nl: bool = True):
+    if not width:
+        typer.secho(name, nl=nl, fg=typer.colors.BRIGHT_MAGENTA)
+    else:
+        typer.secho(name, nl=False, fg=typer.colors.BRIGHT_MAGENTA)
+        typer.echo(" " * (width - len(name)), nl=nl)
+
+
 def app(names: List[str]):
-    for name in names:
+    width = reduce(max, map(len, names))
+    for name in sorted(names, key=len):
+        echo_name(name, width=width, nl=False)
+        typer.echo(" is… ", nl=False)
         if isavailable(name):
-            typer.secho(name, nl=False, fg=typer.colors.BRIGHT_MAGENTA)
-            typer.echo(" is available on PyPI 🎉")
+            typer.secho("    available 🎉", nl=False, fg=typer.colors.BRIGHT_GREEN)
         else:
-            typer.secho(name, nl=False, fg=typer.colors.BRIGHT_MAGENTA)
-            typer.echo(" is ", nl=False)
-            typer.secho("not available", nl=False, fg=typer.colors.BRIGHT_RED)
-            typer.echo(" on PyPI")
+            typer.secho("not available 😭", nl=False, fg=typer.colors.BRIGHT_RED)
+        typer.echo(" on PyPI.")
 
 
 def main():
