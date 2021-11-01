@@ -1,10 +1,12 @@
 # 😻 isavailable
 
-> Can I haz this Python package distribution name on PyPI?
+> Can I haz this Python package on [PyPI][pypi]?
 
-![Can I haz this Python package distribution name on PyPI?](i-can-haz-please.jpg)
+![Can I haz this Python package on PyPI?](i-can-haz-please.jpg)
 
-Check Python package distribution name availability on PyPI.
+Check if Python package names are available on [PyPI][pypi].
+
+[pypi]: https://pypi.org/
 
 ## Usage
 
