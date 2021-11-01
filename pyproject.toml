@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "canihaz"
+name = "isavailable"
 version = "0.1.0"
 description = "Check Python package distribution name availability on PyPI"
 authors = ["Felipe S. S. Schneider <schneider.felipe@posgrad.ufsc.br>"]
@@ -19,7 +19,7 @@ black = {version = "^21.10b0", allow-prereleases = true}
 types-requests = "^2.25.11"
 
 [tool.poetry.scripts]
-canihaz = "canihaz:main"
+isavailable = "isavailable:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
