@@ -1,6 +1,8 @@
-# isavailable
+# 😻 isavailable
 
 > Can I haz this Python package distribution name on PyPI?
+
+![Can I haz this Python package distribution name on PyPI?](i-can-haz-please.jpg)
 
 Check Python package distribution name availability on PyPI.
 
