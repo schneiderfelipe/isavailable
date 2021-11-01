@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "canihaz"
 version = "0.1.0"
-description = ""
-authors = ["Felipe S. S. Schneider <schneiderfelipe@posgrad.ufsc.br>"]
+description = "Check Python package distribution name availability on PyPI"
+authors = ["Felipe S. S. Schneider <schneider.felipe@posgrad.ufsc.br>"]
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
