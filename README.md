@@ -24,6 +24,12 @@ package   is… not available 😭 on PyPI.
 available is…     available 🎉 on PyPI.
 ```
 
+## Installation
+
+```bash
+$ pip install isavailable
+```
+
 ## Help
 
 ```bash
