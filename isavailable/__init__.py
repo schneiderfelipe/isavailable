@@ -9,7 +9,7 @@ import requests
 import typer
 
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 
 def isavailable(name: str) -> bool:
