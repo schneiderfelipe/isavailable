@@ -17,9 +17,9 @@ def isavailable(name: str) -> bool:
     url = f"https://pypi.org/project/{name}/"
     response = requests.get(url)
     if response.status_code == 404:
-        return True
-    elif response.status_code == 200:
         return False
+    elif response.status_code == 200:
+        return True
     else:
         typer.secho(
             f"An error occurred: {response.status_code}",
